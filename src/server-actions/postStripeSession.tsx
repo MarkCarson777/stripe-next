@@ -2,7 +2,7 @@
 
 import { Stripe } from "stripe";
 
-const apiKey = process.env.NEXT_STRIPE_KEY as string;
+const apiKey = process.env.STRIPE_SECRET_KEY as string;
 
 const stripe = new Stripe(apiKey);
 

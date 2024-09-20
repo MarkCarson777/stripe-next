@@ -1,7 +1,7 @@
 import { CheckoutForm } from "@/components/CheckoutForm";
 
 export default function Page() {
-  const priceId = "price_1JkZ5v2eZvKYlo2C5J9J9Q8v";
+  const priceId = "price_1Q18VdLxzZVCInv4C9f5Yezd";
 
   return (
     <main>

@@ -15,7 +15,9 @@ type CheckoutFormProps = {
   priceId: string;
 };
 
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY as string);
+const stripePromise = loadStripe(
+  process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE as string
+);
 
 export function CheckoutForm(props: CheckoutFormProps) {
   const { priceId } = props;
