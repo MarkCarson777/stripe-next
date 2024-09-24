@@ -11,41 +11,41 @@ import stripe from "/public/images/stripe.svg";
 export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col">
-      <nav className="sticky top-0 z-10 grid grid-cols-3 items-center border-b-2 border-[#15233c] bg-white px-4 py-2">
-        <p className="w-fit text-xl font-extrabold text-[#15233c] opacity-0 hover:scale-105 hover:cursor-pointer lg:opacity-100">
-          menu
-        </p>
-        <Image
-          className="mx-auto"
-          src={stripe}
-          alt="Stripe logo"
-          width={96}
-          height={96}
-          priority
-        />
-        <div className="ml-auto flex space-x-4">
+      <header>
+        <nav className="sticky top-0 z-10 grid grid-cols-3 items-center border-b-2 border-[#15233c] bg-white px-4 py-2">
+          <button className="w-fit text-xl font-extrabold text-[#15233c] opacity-0 hover:scale-105 hover:cursor-pointer lg:opacity-100">
+            menu
+          </button>
           <Image
-            className="lg:hidden"
-            src={menu}
-            alt="Menu"
-            width={24}
-            height={24}
+            className="mx-auto"
+            src={stripe}
+            alt="Stripe payment logo"
+            width={96}
+            height={96}
             priority
           />
-          <p className="hidden text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
-            search
-          </p>
-          <p className="hidden text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
-            cart <span className="font-normal">[2]</span>
-          </p>
-        </div>
-      </nav>
+          <div className="ml-auto flex space-x-4">
+            <button aria-label="Toggle menu" className="lg:hidden">
+              <Image src={menu} alt="Menu" width={24} height={24} priority />
+            </button>
+            <button className="hidden text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
+              search
+            </button>
+            <div className="flex items-center space-x-1">
+              <button className="hidden text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
+                cart
+              </button>
+              <span className="font-normal">[2]</span>
+            </div>
+          </div>
+        </nav>
+      </header>
       <main className="grid flex-1 grid-cols-1 overflow-y-auto lg:grid-cols-2">
         <div className="relative h-96 lg:h-full">
           <Image
             className="object-cover"
             src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-            alt="Red handbag"
+            alt="Skeleton print t-shirt"
             fill
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -71,12 +71,43 @@ export default function Home() {
           </div>
           <p className="pb-2 font-extralight uppercase">Size</p>
           <section className="grid grid-cols-6 grid-rows-2 items-center gap-1 pb-4 text-center [&>*]:bg-pink-100 [&>*]:p-2">
-            <span className="hover:cursor-pointer hover:bg-pink-200">xs</span>
-            <span className="hover:cursor-pointer hover:bg-pink-200">s</span>
-            <span className="hover:cursor-pointer hover:bg-pink-200">m</span>
-            <span className="hover:cursor-pointer hover:bg-pink-200">l</span>
-            <span className="hover:cursor-pointer hover:bg-pink-200">xl</span>
-            <span className="hover:cursor-pointer hover:bg-pink-200">xxl</span>
+            <button
+              className="hover:cursor-pointer hover:bg-pink-200"
+              aria-label="Select size XS"
+            >
+              xs
+            </button>
+            <button
+              className="hover:cursor-pointer hover:bg-pink-200"
+              aria-label="Select size XS"
+            >
+              s
+            </button>
+            <button
+              className="hover:cursor-pointer hover:bg-pink-200"
+              aria-label="Select size XS"
+            >
+              m
+            </button>
+            <button
+              className="hover:cursor-pointer hover:bg-pink-200"
+              aria-label="Select size XS"
+            >
+              l
+            </button>
+            <button
+              className="hover:cursor-pointer hover:bg-pink-200"
+              aria-label="Select size XS"
+            >
+              xl
+            </button>
+            <button
+              className="hover:cursor-pointer hover:bg-pink-200"
+              aria-label="Select size XS"
+            >
+              xxl
+            </button>
+
             <Link
               className="col-span-6 rounded font-semibold hover:bg-pink-200"
               href="/checkout"
@@ -106,32 +137,42 @@ export default function Home() {
         <div className="flex justify-center space-x-2 lg:justify-start">
           <Image
             className="rounded hover:scale-105 hover:cursor-pointer"
-            alt="Spanish"
+            alt="Select Spanish language"
             src={spanish}
             width={28}
             height={28}
           />
           <Image
             className="rounded hover:scale-105 hover:cursor-pointer"
-            alt="English"
+            alt="select English language"
             src={english}
             width={28}
             height={28}
           />
         </div>
         <div className="flex w-full flex-col text-center font-semibold lg:flex-row lg:space-x-4">
-          <a href="#">Payment & Shipping</a>
-          <a href="#">Contact</a>
-          <a href="#">Cancellation</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Privacy</a>
+          <Link href="#">Payment & Shipping</Link>
+          <Link href="#">Contact</Link>
+          <Link href="#">Cancellation</Link>
+          <Link href="#">Terms & Conditions</Link>
+          <Link href="#">Privacy</Link>
         </div>
         <div className="flex justify-center space-x-2 lg:justify-end">
           <Link href="#">
-            <Image alt="Instagram" src={instagram} width={24} height={24} />
+            <Image
+              alt="Instagram social media"
+              src={instagram}
+              width={24}
+              height={24}
+            />
           </Link>
           <Link href="#">
-            <Image alt="Facebook" src={facebook} width={24} height={24} />
+            <Image
+              alt="Facebook social media"
+              src={facebook}
+              width={24}
+              height={24}
+            />
           </Link>
         </div>
       </footer>
