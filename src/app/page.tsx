@@ -32,8 +32,8 @@ export default function Home() {
             <button className="hidden text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
               search
             </button>
-            <div className="flex items-center space-x-1">
-              <button className="hidden text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
+            <div className="hidden items-center space-x-1 lg:flex">
+              <button className="text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer">
                 cart
               </button>
               <span className="font-normal">[2]</span>
@@ -134,8 +134,8 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="grid grid-cols-1 items-center space-y-8 border-t-2 border-[#15233c] bg-white px-4 py-12 lg:grid-cols-3 lg:space-y-0 lg:py-4">
-        <div className="flex justify-center space-x-2 lg:justify-start">
+      <footer className="flex flex-col items-center justify-between space-y-12 border-t-2 border-[#15233c] bg-white px-4 py-12 lg:flex-row lg:space-y-0 lg:py-4">
+        <div className="flex space-x-2">
           <Image
             className="rounded hover:scale-105 hover:cursor-pointer"
             alt="Select Spanish language"
@@ -151,14 +151,14 @@ export default function Home() {
             height={28}
           />
         </div>
-        <div className="flex w-full flex-col text-center font-semibold lg:flex-row lg:space-x-4">
+        <div className="flex flex-col text-center font-semibold lg:flex-row lg:space-x-4">
           <Link href="#">Payment & Shipping</Link>
           <Link href="#">Contact</Link>
           <Link href="#">Cancellation</Link>
           <Link href="#">Terms & Conditions</Link>
           <Link href="#">Privacy</Link>
         </div>
-        <div className="flex justify-center space-x-2 lg:justify-end">
+        <div className="flex space-x-2">
           <Link href="#">
             <Image
               alt="Instagram social media"

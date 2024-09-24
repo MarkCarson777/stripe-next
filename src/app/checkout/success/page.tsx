@@ -33,7 +33,7 @@ export default function Page() {
           </div>
           <Link
             className="w-fit rounded bg-pink-100 p-4 font-semibold hover:bg-pink-200"
-            href="/checkout"
+            href="/"
             aria-label="Continue shopping and return to the checkout page"
           >
             Continue shopping
