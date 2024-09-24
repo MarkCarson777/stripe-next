@@ -1,9 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import english from "/public/images/english.svg";
 import facebook from "/public/images/facebook.svg";
 import instagram from "/public/images/instagram.svg";
 import menu from "/public/images/bars-solid.svg";
+import spanish from "/public/images/spanish.svg";
 import stripe from "/public/images/stripe.svg";
 
 export default function Home() {
@@ -101,9 +103,21 @@ export default function Home() {
         </div>
       </main>
       <footer className="grid grid-cols-1 items-center border-t-2 border-[#15233c] bg-white px-4 py-4 lg:grid-cols-3">
-        <div className="space-x-2">
-          <span>es</span>
-          <span>en</span>
+        <div className="flex space-x-2">
+          <Image
+            className="rounded"
+            alt="Spanish"
+            src={spanish}
+            width={24}
+            height={24}
+          />
+          <Image
+            className="rounded"
+            alt="English"
+            src={english}
+            width={24}
+            height={24}
+          />
         </div>
         <div className="space-x-4 font-semibold">
           <a>Payment & Shipping</a>
