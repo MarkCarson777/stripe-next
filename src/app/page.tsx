@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div className="relative flex min-h-screen flex-col">
       <nav className="sticky top-0 z-10 grid grid-cols-3 items-center border-b-2 border-[#15233c] bg-white px-4 py-2">
-        <p className="text-xl font-extrabold text-[#15233c] opacity-0 hover:scale-105 hover:cursor-pointer lg:opacity-100">
+        <p className="w-fit text-xl font-extrabold text-[#15233c] opacity-0 hover:scale-105 hover:cursor-pointer lg:opacity-100">
           menu
         </p>
         <Image
@@ -102,31 +102,31 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="grid grid-cols-1 items-center border-t-2 border-[#15233c] bg-white px-4 py-4 lg:grid-cols-3">
-        <div className="flex space-x-2">
+      <footer className="grid grid-cols-1 items-center space-y-8 border-t-2 border-[#15233c] bg-white px-4 py-12 lg:grid-cols-3 lg:space-y-0 lg:py-4">
+        <div className="flex justify-center space-x-2 lg:justify-start">
           <Image
-            className="rounded"
+            className="rounded hover:scale-105 hover:cursor-pointer"
             alt="Spanish"
             src={spanish}
-            width={24}
-            height={24}
+            width={28}
+            height={28}
           />
           <Image
-            className="rounded"
+            className="rounded hover:scale-105 hover:cursor-pointer"
             alt="English"
             src={english}
-            width={24}
-            height={24}
+            width={28}
+            height={28}
           />
         </div>
-        <div className="space-x-4 font-semibold">
-          <a>Payment & Shipping</a>
-          <a>Contact</a>
-          <a>Cancellation</a>
-          <a>Terms & Conditions</a>
-          <a>Privacy</a>
+        <div className="flex w-full flex-col text-center font-semibold lg:flex-row lg:space-x-4">
+          <a href="#">Payment & Shipping</a>
+          <a href="#">Contact</a>
+          <a href="#">Cancellation</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="#">Privacy</a>
         </div>
-        <div className="ml-auto flex space-x-2">
+        <div className="flex justify-center space-x-2 lg:justify-end">
           <Link href="#">
             <Image alt="Instagram" src={instagram} width={24} height={24} />
           </Link>
