@@ -84,7 +84,7 @@ export default function Home() {
           </section>
           <div className="flex flex-1 flex-col justify-between font-extralight uppercase">
             <a className="underline hover:cursor-pointer hover:no-underline">
-              What's my size?
+              {`What\'s my size?`}
             </a>
             <div className="flex flex-col">
               <a className="underline hover:cursor-pointer hover:no-underline">
