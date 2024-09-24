@@ -1,6 +1,7 @@
+// Next
 import Image from "next/image";
 import Link from "next/link";
-
+// Public images
 import english from "/public/images/english.svg";
 import facebook from "/public/images/facebook.svg";
 import instagram from "/public/images/instagram.svg";
