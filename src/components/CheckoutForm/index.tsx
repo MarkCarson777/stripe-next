@@ -16,8 +16,8 @@ type CheckoutFormProps = {
   priceId: string;
 };
 
-// Initializing Stripe with the public API key using environment variables.
-// This initializes the Stripe instance for client-side use.
+// Initialising Stripe with the public API key using environment variables.
+// This initialises the Stripe instance for client-side use.
 const stripePromise = loadStripe(
   process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE as string,
 );
@@ -32,7 +32,7 @@ export function CheckoutForm(props: CheckoutFormProps) {
   }, [priceId]);
   // Creating an options object that includes the `fetchClientSecret` function to pass to the EmbeddedCheckoutProvider.
   const options = { fetchClientSecret };
-  // The EmbeddedCheckoutProvider is a wrapper that initializes Stripe with the provided options.
+  // The EmbeddedCheckoutProvider is a wrapper that initialises Stripe with the provided options.
   // The EmbeddedCheckout component renders the Stripe checkout form within the application.
   return (
     <div id="checkout">
