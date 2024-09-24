@@ -1,4 +1,3 @@
-// Indicates that this component uses React client-side rendering.
 "use client";
 
 // React
@@ -24,14 +23,17 @@ const stripePromise = loadStripe(
 
 export function CheckoutForm(props: CheckoutFormProps) {
   const { priceId } = props;
+
   // Defining a memoized function `fetchClientSecret` using useCallback. This function is responsible for getting the client secret
   // from the server by calling the postStripeSession function and passing the `priceId`. The client secret is needed for processing the payment.
   const fetchClientSecret = useCallback(async () => {
     const stripeResponse = await postStripeSession({ priceId });
     return stripeResponse.clientSecret;
   }, [priceId]);
+
   // Creating an options object that includes the `fetchClientSecret` function to pass to the EmbeddedCheckoutProvider.
   const options = { fetchClientSecret };
+
   // The EmbeddedCheckoutProvider is a wrapper that initialises Stripe with the provided options.
   // The EmbeddedCheckout component renders the Stripe checkout form within the application.
   return (
