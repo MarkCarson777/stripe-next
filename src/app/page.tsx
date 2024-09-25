@@ -52,7 +52,7 @@ export default function Home() {
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
-        <div className="flex flex-col p-6 lg:w-1/2">
+        <div className="flex flex-col p-6 lg:w-3/5">
           <p className="mb-6 text-xs font-extralight uppercase">Home / Tops</p>
           <p className="mb-2 text-2xl font-semibold">Skeleton Print T-Shirt</p>
           <p className="text-sm font-extralight">$100</p>
