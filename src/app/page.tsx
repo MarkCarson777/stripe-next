@@ -14,26 +14,26 @@ export default function Home() {
     <div className="relative flex min-h-screen flex-col">
       <header>
         <nav className="sticky top-0 z-10 grid grid-cols-3 items-center border-b-2 border-[#15233c] bg-white px-4 py-2">
-          <button className="w-fit text-xl font-extrabold text-[#15233c] opacity-0 hover:scale-105 hover:cursor-pointer lg:opacity-100">
+          <button className="w-fit font-semibold text-[#15233c] opacity-0 hover:scale-105 hover:cursor-pointer lg:opacity-100">
             menu
           </button>
           <Image
             className="mx-auto"
             src={stripe}
             alt="Stripe payment logo"
-            width={96}
-            height={96}
+            width={64}
+            height={64}
             priority
           />
           <div className="ml-auto flex space-x-4">
             <button aria-label="Toggle menu" className="lg:hidden">
               <Image src={menu} alt="Menu" width={24} height={24} priority />
             </button>
-            <button className="hidden text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
+            <button className="hidden font-semibold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
               search
             </button>
             <div className="hidden items-center space-x-1 lg:flex">
-              <button className="text-xl font-extrabold text-[#15233c] hover:scale-105 hover:cursor-pointer">
+              <button className="font-semibold text-[#15233c] hover:scale-105 hover:cursor-pointer">
                 cart
               </button>
               <span className="font-normal">[2]</span>
@@ -52,71 +52,73 @@ export default function Home() {
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
         </div>
-        <div className="flex flex-col p-8 lg:w-2/3">
-          <p className="pb-4 font-extralight uppercase">Home / Tops</p>
-          <p className="pb-2 text-2xl font-semibold">Skeleton Print T-Shirt</p>
-          <p className="pb-6 text-xl font-extralight">$100</p>
-          <div className="flex items-center space-x-6">
-            <div className="space-x-2">
-              <span className="font-extralight uppercase">Color:</span>
-              <span className="mr-2 font-semibold">Black</span>
+        <div className="flex flex-col p-6 lg:w-1/2">
+          <p className="mb-6 text-xs font-extralight uppercase">Home / Tops</p>
+          <p className="mb-2 text-2xl font-semibold">Skeleton Print T-Shirt</p>
+          <p className="text-sm font-extralight">$100</p>
+          <div className="my-4 flex items-center space-x-6">
+            <div className="space-x-1 py-2">
+              <span className="text-sm font-extralight uppercase">Color:</span>
+              <span className="mr-2 text-sm font-semibold">Black</span>
             </div>
             <div className="flex space-x-2">
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-black bg-white hover:cursor-pointer">
+              <div className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-black bg-white hover:cursor-pointer">
                 <div className="h-4 w-4 rounded-full bg-black"></div>
               </div>
-              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-black bg-white hover:cursor-pointer hover:border-2">
+              <div className="flex h-6 w-6 items-center justify-center rounded-full border border-black bg-white hover:cursor-pointer hover:border-2">
                 <div className="h-4 w-4 rounded-full bg-gray-200"></div>
               </div>
             </div>
           </div>
-          <p className="pb-2 font-extralight uppercase">Size</p>
-          <section className="grid grid-cols-6 grid-rows-2 items-center gap-1 pb-4 text-center [&>*]:bg-pink-100 [&>*]:p-2">
-            <button
-              className="hover:cursor-pointer hover:bg-pink-200"
-              aria-label="Select size XS"
-            >
-              xs
-            </button>
-            <button
-              className="hover:cursor-pointer hover:bg-pink-200"
-              aria-label="Select size XS"
-            >
-              s
-            </button>
-            <button
-              className="hover:cursor-pointer hover:bg-pink-200"
-              aria-label="Select size XS"
-            >
-              m
-            </button>
-            <button
-              className="hover:cursor-pointer hover:bg-pink-200"
-              aria-label="Select size XS"
-            >
-              l
-            </button>
-            <button
-              className="hover:cursor-pointer hover:bg-pink-200"
-              aria-label="Select size XS"
-            >
-              xl
-            </button>
-            <button
-              className="hover:cursor-pointer hover:bg-pink-200"
-              aria-label="Select size XS"
-            >
-              xxl
-            </button>
-
+          <div className="mb-2 flex flex-col space-y-1">
+            <p className="text-sm font-extralight uppercase">Size</p>
+            <div className="grid grid-cols-6 items-center gap-1 text-center text-sm [&>*]:bg-pink-100 [&>*]:px-2 [&>*]:py-1">
+              <button
+                className="hover:cursor-pointer hover:bg-pink-200"
+                aria-label="Select size XS"
+              >
+                xs
+              </button>
+              <button
+                className="hover:cursor-pointer hover:bg-pink-200"
+                aria-label="Select size XS"
+              >
+                s
+              </button>
+              <button
+                className="hover:cursor-pointer hover:bg-pink-200"
+                aria-label="Select size XS"
+              >
+                m
+              </button>
+              <button
+                className="hover:cursor-pointer hover:bg-pink-200"
+                aria-label="Select size XS"
+              >
+                l
+              </button>
+              <button
+                className="hover:cursor-pointer hover:bg-pink-200"
+                aria-label="Select size XS"
+              >
+                xl
+              </button>
+              <button
+                className="hover:cursor-pointer hover:bg-pink-200"
+                aria-label="Select size XS"
+              >
+                xxl
+              </button>
+            </div>
             <Link
-              className="col-span-6 rounded font-semibold hover:bg-pink-200"
+              className="w-full rounded bg-pink-100 py-2 text-center text-sm font-semibold hover:bg-pink-200"
               href="/checkout"
             >
               Buy Now
             </Link>
-          </section>
-          <div className="flex flex-1 flex-col justify-between font-extralight uppercase">
+          </div>
+
+          <div className="flex flex-1 flex-col justify-between text-sm font-extralight uppercase">
             <a className="underline hover:cursor-pointer hover:no-underline">
               {`What\'s my size?`}
             </a>
@@ -134,24 +136,24 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="flex flex-col items-center justify-between space-y-12 border-t-2 border-[#15233c] bg-white px-4 py-12 lg:flex-row lg:space-y-0 lg:py-4">
+      <footer className="flex flex-col items-center justify-between space-y-12 border-t-2 border-[#15233c] bg-white px-4 py-12 lg:flex-row lg:space-y-0 lg:py-2">
         <div className="flex space-x-2">
           <Image
             className="rounded hover:scale-105 hover:cursor-pointer"
             alt="Select Spanish language"
             src={spanish}
-            width={28}
-            height={28}
+            width={24}
+            height={24}
           />
           <Image
             className="rounded hover:scale-105 hover:cursor-pointer"
             alt="select English language"
             src={english}
-            width={28}
-            height={28}
+            width={24}
+            height={24}
           />
         </div>
-        <div className="flex flex-col text-center font-semibold lg:flex-row lg:space-x-4">
+        <div className="flex flex-col text-center text-xs lg:flex-row lg:space-x-4">
           <Link href="#">Payment & Shipping</Link>
           <Link href="#">Contact</Link>
           <Link href="#">Cancellation</Link>
@@ -163,16 +165,16 @@ export default function Home() {
             <Image
               alt="Instagram social media"
               src={instagram}
-              width={24}
-              height={24}
+              width={20}
+              height={20}
             />
           </Link>
           <Link href="#">
             <Image
               alt="Facebook social media"
               src={facebook}
-              width={24}
-              height={24}
+              width={20}
+              height={20}
             />
           </Link>
         </div>
