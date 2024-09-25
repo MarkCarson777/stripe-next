@@ -27,7 +27,7 @@ export default function Home() {
           />
           <div className="ml-auto flex space-x-4">
             <button aria-label="Toggle menu" className="lg:hidden">
-              <Image src={menu} alt="Menu" width={24} height={24} priority />
+              <Image src={menu} alt="Menu" width={20} height={20} priority />
             </button>
             <button className="hidden font-semibold text-[#15233c] hover:scale-105 hover:cursor-pointer lg:block">
               search
@@ -117,8 +117,7 @@ export default function Home() {
               Buy Now
             </Link>
           </div>
-
-          <div className="flex flex-1 flex-col justify-between text-sm font-extralight uppercase">
+          <div className="mb-4 mt-6 flex flex-1 flex-col justify-between text-sm font-extralight uppercase lg:mb-0 lg:mt-0">
             <a className="underline hover:cursor-pointer hover:no-underline">
               {`What\'s my size?`}
             </a>
@@ -136,7 +135,7 @@ export default function Home() {
           </div>
         </div>
       </main>
-      <footer className="flex flex-col items-center justify-between space-y-12 border-t-2 border-[#15233c] bg-white px-4 py-12 lg:flex-row lg:space-y-0 lg:py-2">
+      <footer className="flex flex-col items-center justify-between space-y-8 border-t-2 border-[#15233c] bg-white px-4 py-12 lg:flex-row lg:space-y-0 lg:py-2">
         <div className="flex space-x-2">
           <Image
             className="rounded hover:scale-105 hover:cursor-pointer"
