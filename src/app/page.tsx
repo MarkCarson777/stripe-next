@@ -120,11 +120,11 @@ export default function Home() {
           <div className="mb-4 mt-6 flex flex-1 flex-col justify-between text-sm font-extralight uppercase lg:mb-0 lg:mt-0">
             <Link
               href="#"
-              className="underline hover:cursor-pointer hover:no-underline"
+              className="mb-4 underline hover:cursor-pointer hover:no-underline lg:mb-0"
             >
               {`What\'s my size?`}
             </Link>
-            <div className="flex flex-col">
+            <div className="flex flex-col space-y-4 lg:space-y-0">
               <Link
                 href="#"
                 className="underline hover:cursor-pointer hover:no-underline"
