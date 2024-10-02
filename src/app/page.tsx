@@ -118,19 +118,31 @@ export default function Home() {
             </Link>
           </div>
           <div className="mb-4 mt-6 flex flex-1 flex-col justify-between text-sm font-extralight uppercase lg:mb-0 lg:mt-0">
-            <a className="underline hover:cursor-pointer hover:no-underline">
+            <Link
+              href="#"
+              className="underline hover:cursor-pointer hover:no-underline"
+            >
               {`What\'s my size?`}
-            </a>
+            </Link>
             <div className="flex flex-col">
-              <a className="underline hover:cursor-pointer hover:no-underline">
+              <Link
+                href="#"
+                className="underline hover:cursor-pointer hover:no-underline"
+              >
                 Product details
-              </a>
-              <a className="underline hover:cursor-pointer hover:no-underline">
+              </Link>
+              <Link
+                href="#"
+                className="underline hover:cursor-pointer hover:no-underline"
+              >
                 Size & fit
-              </a>
-              <a className="underline hover:cursor-pointer hover:no-underline">
+              </Link>
+              <Link
+                href="#"
+                className="underline hover:cursor-pointer hover:no-underline"
+              >
                 Free delivery & easy returns
-              </a>
+              </Link>
             </div>
           </div>
         </div>
